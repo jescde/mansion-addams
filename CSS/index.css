@@ -1,11 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=UnifrakturMaguntia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
 
 body {
     background: url('../photo/mansion-exterior.jpg') no-repeat center center/cover;
     color: #ddd;
-    font-family: 'Cinzel Decorative', serif;
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-weight: bold;
+    font-size: 25px;
     text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 10%, rgba(0,0,0,0) 60%);
+    opacity: 0.8;
+    animation: fogAnimation 10s infinite alternate;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes fogAnimation {
+    0% { filter: blur(3px); opacity: 0.6; }
+    100% { filter: blur(8px); opacity: 0.9; }
+}
+
 
 .container-registro {
     background: rgba(0, 0, 0, 0.8);
@@ -18,9 +48,9 @@ body {
 }
 
 .titulo-registro {
-    font-family: 'UnifrakturMaguntia', cursive;
+    font-family: 'Creepster', cursive;
     font-size: 28px;
-    color: #c00;
+    color: #d4af37;
     text-shadow: 2px 2px 5px black;
 }
 
@@ -35,12 +65,15 @@ input {
 }
 
 button {
-    background: #600;
-    color: white;
+    background: #d4af37;
+    font-family: 'Creepster', cursive;
+    color: black;
     padding: 10px 20px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    font-weight: bold;
     margin: 10px;
     transition: all 0.3s;
 }
@@ -48,9 +81,44 @@ button {
 button:hover {
     background: #900;
     box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5);
+    color: white;
 }
 
 p {
-    font-size: 18px;
-    font-style: italic;
+    font-size: 25px;
+    font-style: 'Creepster';
+}
+
+#door-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    background: black;
+}
+
+.door {
+    position: absolute;
+    width: 50vw;
+    height: 100vh;
+    transition: transform 2s ease-in-out;
+    background-size: cover;
+    background-position: center;
+}
+
+.left-door {
+    left: 0;
+    transform-origin: left;
+    background-image: url(../photo/puerta-izquierda.jpg);
+}
+
+.right-door {
+    right: 0;
+    transform-origin: right;
+    background-image: url(../photo/puerta-derecha.jpg);
 }

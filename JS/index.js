@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector(".registroForm");
-    const nombreCorrecto = "Noelia"; // Cambia esto por el nombre que desees
-    const passwordCorrecto = "1234"; // Cambia esto por la contraseña predefinida
+    const nombreCorrecto = "Noelia"; // Cambia esto por el nombre correcto
+    const passwordCorrecto = "1234"; // Cambia esto por la contraseña correcta
+    const doorContainer = document.getElementById("door-container");
+    const doors = document.querySelectorAll(".door");
 
     form.addEventListener("submit", function (event) {
         event.preventDefault(); // Evita que el formulario se envíe automáticamente
@@ -11,7 +13,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (nombreInput === nombreCorrecto && passwordInput === passwordCorrecto) {
             alert("¡Bienvenida a la Mansión Addams, " + nombreCorrecto + "!");
-            window.location.href = "mansion.html"; // Redirige a otra página si es necesario
+
+            // Muestra las puertas cerradas
+            doorContainer.style.display = "flex";
+
+            // Espera un poco y comienza la animación
+            setTimeout(() => {
+                doors[0].style.transform = "rotateY(-100deg)";
+                doors[1].style.transform = "rotateY(100deg)";
+            }, 500);
+
+            // Espera a que la animación termine y redirige
+            setTimeout(() => {
+                window.location.href = "mansion.html";
+            }, 2500);
         } else {
             alert("Nombre o contraseña incorrectos. Inténtalo de nuevo.");
         }
