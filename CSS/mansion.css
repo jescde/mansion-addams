@@ -158,6 +158,14 @@ body {
     display: none;
 }
 
+#character-message.hidden {
+    display: none !important;
+}
+
+#follow-thing.hidden {
+    display: none !important;
+}
+
 .show-button {
     display: block;
     animation: fadeIn 1s forwards;
