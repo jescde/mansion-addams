@@ -1,11 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mansión Addams</title>
+    <title>Hall Mansión Addams</title>
+    <link rel="stylesheet" href="../REGALO/CSS/mansion.css">
 </head>
 <body>
-    <p>Hello world!!</p>
+
+    <div class="hall-mansion">
+        <div id="welcome-message-hall">
+            <h1>Bienvenida a la Mansión de la Familia Addams</h1>
+        </div>
+    </div>
+
+    <!-- Mensaje de Lurch -->
+    <div class="lurch-container">
+        <img id="lurch" src="../REGALO/photo/lurch.png" alt="Lurch">
+        <div id="lurch-message" class="lurch-bubble">¡GRRRR!</div>
+    </div>
+
+    <!-- Imagen de Cosa -->
+    <img id="thing" src="../REGALO/photo/thing.png" alt="Cosa" class="hidden">
+
+    <!-- Mensaje de Cosa -->
+    <div id="character-message" class="hidden">
+        ✋ ✌ ✊ ✊ 👆 (Cosa dice que por fin llegaste, te estaba esperando... ¡Rápido! Cosa quiere enseñarte algo)
+        <br>
+        <button id="follow-thing" class="hidden" onclick="goToNextPage()">Seguir a Cosa</button>
+    </div>
+
+    <!-- Botón para abrir el menú -->
+    <span class="menu-btn" onclick="openMenu()">☰</span>
+
+    <!-- Menú desplegable -->
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">×</a>
+        <a href="#">Inicio</a>
+        <a href="#">Historia</a>
+        <a href="#">Personajes</a>
+        <a href="#">Contacto</a>
+    </div>
+
+    <!-- Enlace al JS -->
+    <script src="../REGALO/JS/mansion.js"></script>
 </body>
 </html>

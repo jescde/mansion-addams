@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../photo/hall.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Creepster', cursive;
+    color: #f5d442;
+    text-align: center;
+}
+
+/* Animación para el mensaje de bienvenida */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#welcome-message-hall h1 {
+    font-size: 2.5rem;
+    text-shadow: 3px 3px 5px black;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+/* Menú desplegable */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #f5d442;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #444;
+}
+
+.menu-btn {
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: #f5d442;
+    z-index: 1000;
+}
+
+/* Ajustar posición final de Cosa */
+#thing {
+    position: absolute;
+    bottom: 15%;
+    left: -150px;
+    width: 250px;
+    height: auto;
+    animation: moveThing 4s linear forwards;
+}
+
+/* Corrección del movimiento de Cosa */
+@keyframes moveThing {
+    0% { left: -150px; }
+    100% { left: 50%; transform: translateX(-50%); }
+}
+
+/* Posicionar mensaje y botón debajo de Cosa */
+#character-message, #follow-thing {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#character-message {
+    display: flex;
+    flex-direction: column; /* Asegura que el mensaje y el botón estén en columnas */
+    align-items: center; /* Centra los elementos horizontalmente */
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro para mejor visibilidad */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#follow-thing {
+    margin-top: 10px; /* Separa el botón del mensaje */
+    background-color: yellow;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Posicionar Lurch en la parte izquierda */
+#lurch {
+    position: absolute;
+    bottom: 30%;
+    left: 25%;
+    width: 400px;
+    height: auto;
+}
+
+#lurch-message {
+    position: absolute;
+    bottom: 70%;
+    left: 30%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro para mejor visibilidad */
+}
+
+/* Animación mejorada para aparición de Lurch */
+.hidden { display: none; }
+
+.show {
+    display: block;
+    animation: fadeInLurch 3s forwards;
+}
+
+@keyframes fadeInLurch {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Botón "Seguir a Cosa" */
+#follow-thing {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f5d442;
+    color: black;
+    font-family: 'Creepster', cursive;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    transition: 0.3s;
+}
+
+#follow-thing:hover {
+    background-color: black;
+    color: #f5d442;
+}
+
+.hidden {
+    display: none;
+}
