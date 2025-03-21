@@ -2,35 +2,61 @@ document.addEventListener("DOMContentLoaded", function () {
     const thing = document.getElementById("thing");
     const message = document.getElementById("character-message");
     const lurch = document.getElementById("lurch");
-    const lurchWarning = document.getElementById("lurch-warning");
+    const lurchWarning = document.getElementById("lurch-message");
     const followThing = document.getElementById("follow-thing");
+    const sidebar = document.querySelector(".sidebar");
 
     if (thing) {
-        // Aseguramos que "Cosa" aparece después de 500ms
         setTimeout(() => {
-            thing.style.display = "block"; // Asegura que sea visible
+            thing.classList.remove("hidden");
             thing.classList.add("show");
         }, 500);
 
-        // Usar setTimeout en vez de animationend para más compatibilidad
-        setTimeout(() => {
+        // Verificar que thing tiene animación
+        thing.addEventListener("animationend", () => {
             if (message) {
-                message.style.display = "block";
+                message.classList.remove("hidden");
                 message.classList.add("show");
             }
-        }, 4000); // 4s para asegurar que "Cosa" termina de moverse
+
+            // Asegurar que el botón aparece después del mensaje
+            setTimeout(() => {
+                if (followThing) {
+                    followThing.classList.remove("hidden");
+                    followThing.classList.add("show-button");
+                }
+            }, 1000);
+        });
+
+        // Si la animación no se ejecuta, forzar la visibilidad después de un tiempo
+        setTimeout(() => {
+            if (message && !message.classList.contains("show")) {
+                message.classList.remove("hidden");
+                message.classList.add("show");
+            }
+            if (followThing && followThing.classList.contains("hidden")) {
+                followThing.classList.remove("hidden");
+                followThing.classList.add("show-button");
+            }
+        }, 5000);
     }
 
-    // Aparecen Lurch y su advertencia después de 2.5s
     setTimeout(() => {
-        if (lurch) lurch.style.display = "block";
-        if (lurchWarning) lurchWarning.style.display = "block";
-
-        // Luego de 1s más, mostramos el botón "Seguir a Cosa"
-        setTimeout(() => {
-            if (followThing) followThing.style.display = "block";
-        }, 1000);
+        if (lurch) lurch.classList.remove("hidden");
+        if (lurchWarning) lurchWarning.classList.remove("hidden");
     }, 2500);
+
+    // Agregar evento de clic al botón "Seguir a Cosa"
+    if (followThing) {
+        followThing.addEventListener("click", goToNextPage);
+    }
+
+    // Cerrar el menú con la tecla Escape
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && sidebar.style.width === "250px") {
+            closeMenu();
+        }
+    });
 });
 
 /* Funciones del menú */
@@ -45,5 +71,5 @@ function closeMenu() {
 }
 
 function goToNextPage() {
-    window.location.href = "mazmorra.html"; // Reemplaza con la URL real
+    window.location.href = "mazmorra.html";
 }

@@ -98,16 +98,6 @@ body {
     border-radius: 10px;
 }
 
-#follow-thing {
-    margin-top: 10px; /* Separa el botón del mensaje */
-    background-color: yellow;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 20px;
-    cursor: pointer;
-}
-
 /* Posicionar Lurch en la parte izquierda */
 #lurch {
     position: absolute;
@@ -121,7 +111,9 @@ body {
     position: absolute;
     bottom: 70%;
     left: 30%;
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro para mejor visibilidad */
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 10px;
 }
 
 /* Animación mejorada para aparición de Lurch */
@@ -138,9 +130,12 @@ body {
 }
 
 /* Botón "Seguir a Cosa" */
+/* ... (el resto del CSS sigue igual) */
+
+/* Botón "Seguir a Cosa" */
 #follow-thing {
     position: absolute;
-    bottom: 15%;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
     background-color: #f5d442;
@@ -151,7 +146,6 @@ body {
     border: 2px solid black;
     border-radius: 5px;
     cursor: pointer;
-    display: none;
     transition: 0.3s;
 }
 
@@ -162,4 +156,9 @@ body {
 
 .hidden {
     display: none;
+}
+
+.show-button {
+    display: block;
+    animation: fadeIn 1s forwards;
 }
