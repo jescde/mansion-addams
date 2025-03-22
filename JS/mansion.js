@@ -70,6 +70,7 @@ function closeMenu() {
     if (sidebar) sidebar.style.width = "0";
 }
 
+/* Botón para seguir a Cosa a la siguiente página */
 function goToNextPage() {
     window.location.href = "mazmorra.html";
 }

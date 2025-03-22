@@ -8,6 +8,54 @@
     <link rel="stylesheet" href="CSS/mazmorra.css">
 </head>
 <body>
-    <h1>Hello World!!</h1>
+    <div id="welcome-message">
+        <h1>Mazmorras de la Mansión Addams</h1>
+    </div>
+
+    <!-- Botón para abrir el menú -->
+    <button id="btn-mansion" onclick="goToNextPage()">Volver a la Mansión</button>
+
+    <!-- Imagen de Miercoles Addams -->
+    <div id="wednesday">
+        <img id="wednesday-photo" src="photo/Miercoles.png" alt="Imagen de Miércoles Addams">
+    </div>
+
+    <!-- Mensaje de Miercoles -->
+     <div class="wednesday-message">
+        <p id="wednesday-message">
+            "¿Qué es esto? ¿Cosa... guiando a alguien a las mazmorras? No me digas que ese montón de pelo con dedos ha decidido 
+            jugar al anfitrión. Las mazmorras son para los que merecen agonizar en silencio, no para... 
+            [mira al invitado de arriba abajo]... 
+            lo que sea que tú eres. ¿Quién te dio permiso para profanar lo único decente de esta casa?"
+        </p>
+        <p id="wednesday-message2">"Supongo que quieres verlos. Los desdichados que respiran el aire rancio de las mazmorras. 
+            No te emociones demasiado; no son más que sombras con cadenas, aunque algunos aún gritan. Ven, mira por la rendija. 
+            Ese de ahí intentó escapar el martes. Ahora las ratas son su única compañía. Si te aburres, puedo abrir la puerta. 
+            Pero no esperes salir intacta."</p>
+     </div>
+
+     <!-- Botones de los presos en las mazmorras -->
+    <div class="buttons-container">
+        
+        <!-- Botones de la izquierda -->
+        <div class="left-buttons">
+            <button class="hidden-button" id="btn1">Desdichado 1</button>
+            <button class="hidden-button" id="btn2">Desdichado 2</button>
+            <button class="hidden-button" id="btn3">Desdichado 3</button>
+        </div>
+        
+        <!-- Botones de la derecha -->
+        <div class="right-buttons">
+            <button class="hidden-button" id="btn4">Desdichado 4</button>
+            <button class="hidden-button" id="btn5">Desdichado 5</button>
+        </div>
+    </div>
+    
+    <!-- Cuadro de diálogo único para mostrar los mensajes de los desdichados -->
+    <div id="miercoles-dialogo" class="dialogo">
+        <p id="dialogo-texto">Haz clic en un desdichado para escuchar su historia...</p>
+    </div>
+
+    <script src="JS/mazmorra.js"></script>
 </body>
 </html>

@@ -8,4 +8,172 @@ body{
     font-family: 'Creepster', cursive;
     color: #f5d442;
     text-align: center;
+    overflow-x: hidden; /* Oculta el desplazamiento lateral */
+}
+
+/* Animación para el mensaje de bienvenida */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#welcome-message{
+    font-size: 1.2rem;
+    text-shadow: 3px 3px 5px black;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+/* Animación de latido para el texto de bienvenida */
+@keyframes latido {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+h1 {
+    display: inline-block; /* Hace que el texto respete el espacio disponible */
+    transform-origin: center; /* Mantiene el crecimiento centrado */
+    animation: latido 1.5s ease-in-out infinite alternate;
+}
+
+/* Botón para volver la Mansión */
+#btn-mansion{
+    background-color: #f5d442;
+    color: black;
+    font-family: Creepster;
+    font-size: 17px;
+    border: 2px solid black;
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+}
+
+#btn-mansion:hover {
+    background-color: black;
+    color: #f5d442;
+}
+
+/* Contenedor de la imagen */
+#wednesday {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    margin-top: 50px; /* Espacio con el contenido superior */
+}
+
+/* Imagen de Miercoles */
+#wednesday-photo {
+    opacity: 0; /* Inicialmente oculta */
+    width: 300px;
+    max-width: 500px;
+    height: auto;
+    transform: translateY(50px);
+    animation: fadeInMove 2s ease-in-out 1s forwards; /* Aparece después de 1s */
+}
+
+/* Animación de la imagen de Miercoles */
+@keyframes fadeInMove {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mensajes de Miercoles */
+#wednesday-message, #wednesday-message2 {
+    text-align: center;
+    max-width: 600px;
+    margin: 20px auto 0 auto;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #f5d442;
+    font-family: "Creepster", cursive;
+    font-size: 18px;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.hidden-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Permite que el texto se organice en dos líneas */
+    width: 110px; /* Aumentado un poco para mejor proporción */
+    height: auto;
+    padding: 5px;
+    margin: 10px;
+    background-color: #000;
+    color: #FFD700;
+    border: 2px solid #FFD700;
+    cursor: pointer;
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.hidden-button:hover {
+    transform: scale(1.1);
+    background-color: #FFD700;
+    color: #000;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    top: 60%; /* Ajusta según sea necesario */
+}
+
+.left-buttons, .right-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-box {
+    display: none;
+    color: white;
+    padding: 10px;
+    border: 2px solid #FFD700;
+    background: rgba(0, 0, 0, 0.8);
+    margin-top: 20px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
 }
