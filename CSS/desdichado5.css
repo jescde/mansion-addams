@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+/* Estilos para el cuerpo de la página */
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../photo/interioMazmorra.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Creepster', cursive;
+    color: #f5d442;
+    text-align: center;
+    overflow-x: hidden; /* Oculta el desplazamiento lateral */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
+
+/* Contenedor principal del contenido */
+.desdichado-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Título del desdichado */
+h2 {
+    font-size: 2em;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.7);
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 2; /* Asegura que esté sobre otros elementos */
+}
+
+/* Estilos para la descripción del preso */
+.preso-descripcion {
+    font-size: 1.2em;
+    text-align: justify;
+    line-height: 1.5;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    background: rgba(30, 30, 30, 0.7);
+    border-left: 4px solid #f5d442;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Imagen de Edgar Allan Poe */
+#Edgar-image {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+#Edgar-image:hover {
+    transform: scale(1.1);
+}
+
+/* Botón para volver a la mansión */
+#btn-mansion {
+    background: #f5d442;
+    color: black;
+    font-family: 'Creepster', cursive;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+#btn-mansion:hover {
+    background: #d4b92e;
+    transform: scale(1.1);
+}

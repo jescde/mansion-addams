@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+/* Estilos para el cuerpo de la página */
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../photo/interioMazmorra.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Creepster', cursive;
+    color: #f5d442;
+    text-align: center;
+    overflow-x: hidden; /* Oculta el desplazamiento lateral */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
+
+/* Contenedor principal centrado */
+.desdichado-content {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente para mejorar la visibilidad del contenido */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Imagen de Robe */
+#robe-image {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Ajustar el audio */
+audio {
+    width: 300px;
+}
+
+/* Estilos del botón */
+.next-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f5d442;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.next-button:hover {
+    background-color: #e0c137;
+}
+

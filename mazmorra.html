@@ -31,7 +31,7 @@
         <p id="wednesday-message2">"Supongo que quieres verlos. Los desdichados que respiran el aire rancio de las mazmorras. 
             No te emociones demasiado; no son más que sombras con cadenas, aunque algunos aún gritan. Ven, mira por la rendija. 
             Ese de ahí intentó escapar el martes. Ahora las ratas son su única compañía. Si te aburres, puedo abrir la puerta. 
-            Pero no esperes salir intacta."</p>
+            Pero no esperes salir intacta." (Pulsa para ver a cada infeliz)</p>
      </div>
 
      <!-- Botones de los presos en las mazmorras -->
@@ -39,21 +39,26 @@
         
         <!-- Botones de la izquierda -->
         <div class="left-buttons">
-            <button class="hidden-button" id="btn1">Desdichado 1</button>
-            <button class="hidden-button" id="btn2">Desdichado 2</button>
-            <button class="hidden-button" id="btn3">Desdichado 3</button>
+           
+            <!-- Botón de Desdichado 1 -->
+            <button class="hidden-button" id="btn1" onclick="redirectTo('desdichado1.html')">Desdichado 1</button>
+
+            <!-- Botón de Desdichado 2 -->
+            <button class="hidden-button" id="btn2" onclick="redirectTo('desdichado2.html')">Desdichado 2</button>
+
+            <!-- Botón de Desdichado 3 -->
+            <button class="hidden-button" id="btn3" onclick="redirectTo('desdichado3.html')">Desdichado 3</button>
+
         </div>
         
         <!-- Botones de la derecha -->
         <div class="right-buttons">
-            <button class="hidden-button" id="btn4">Desdichado 4</button>
-            <button class="hidden-button" id="btn5">Desdichado 5</button>
+            <!-- Botón de Desdichado 4 -->
+            <button class="hidden-button" id="btn4" onclick="redirectTo('desdichado4.html')">Desdichado 4</button>
+
+            <!-- Botón de Desdichado 5 -->
+            <button class="hidden-button" id="btn5" onclick="redirectTo('desdichado5.html')">Desdichado 5</button>
         </div>
-    </div>
-    
-    <!-- Cuadro de diálogo único para mostrar los mensajes de los desdichados -->
-    <div id="miercoles-dialogo" class="dialogo">
-        <p id="dialogo-texto">Haz clic en un desdichado para escuchar su historia...</p>
     </div>
 
     <script src="JS/mazmorra.js"></script>
