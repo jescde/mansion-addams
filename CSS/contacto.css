@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+/* Estilos para el cuerpo de la página */
+body {
+    margin: 0;
+    padding: 0;
+    background: url('../photo/salon.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Creepster', cursive;
+    color: #f5d442;
+    text-align: center;
+    overflow-x: hidden; /* Oculta el desplazamiento lateral */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
+
+h1 {
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    color: #f5d442;
+    opacity: 0;  /* Oculto al inicio */
+    animation: fadeIn 2s ease-in-out forwards;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Animación de FadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.titulo h1 {
+    font-size: 2em;
+    color: #f5d442;
+    margin: 0;
+    text-shadow: 3px 3px 10px rgb(2, 2, 2), /* Resplandor dorado */
+                 -3px -3px 10px rgba(255, 215, 0, 1);
+}
+
+#joke-img {
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.9)); /* Sombra negra alrededor */
+}
+
+.contacto {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+    color: #f5d442;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* Botón para volver a la mansión */
+#btn-mansion {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #f5d442;
+    color: black;
+    font-family: 'Creepster', cursive;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+#btn-mansion:hover {
+    background: #d4b92e;
+    transform: scale(1.1);
+}

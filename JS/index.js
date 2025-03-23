@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector(".registroForm");
-    const nombreCorrecto = "Noelia"; // Cambia esto por el nombre correcto
-    const passwordCorrecto = "1234"; // Cambia esto por la contraseña correcta
+    const nombreCorrecto = "Noelia";
+    const passwordCorrecto = "nr13"; 
     const doorContainer = document.getElementById("door-container");
     const doors = document.querySelectorAll(".door");
 
